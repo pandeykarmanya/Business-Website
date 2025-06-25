@@ -49,7 +49,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/86fedd1d-79a5-4bf0-baa4-4a2ed17069de.png" 
+                src="/lovable-uploads/logo.png" 
                 alt="Saksham Enterprises Logo" 
                 className="h-20 w-auto"
               />
@@ -226,37 +226,126 @@ const Index = () => {
 
       {/* Products Section */}
       <section ref={productsRef} className="py-20 bg-gradient-to-br from-emerald-50 to-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 opacity-0" style={{ animationDelay: '0.1s' }}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Products</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive solutions designed to meet the diverse needs of modern enterprises.
-            </p>
+      <div className="container mx-auto px-6 py-12">
+  <style>{`
+    .flip-container {
+      perspective: 1000px;
+      width: 100%;
+      height: 320px;
+    }
+    .flip-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+    .flip-card:hover {
+      transform: rotateY(180deg);
+    }
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .flip-front {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .flip-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    .flip-front h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .flip-back {
+      background-color: #ecfdf5;
+      transform: rotateY(180deg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #065f46;
+    }
+    .flip-back h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+    .flip-back ul {
+      padding-left: 1rem;
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  `}</style>
+
+  <div className="text-center mb-16">
+    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Products</h2>
+    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      Comprehensive solutions designed to meet the diverse needs of modern enterprises.
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {[
+      {
+        title: "Railway Inspection trolley",
+        image: "/lovable-uploads/1.jpeg",
+        details: ["Elastic Rail Clips", "Fish Plates", "Bolts & Nuts", "Rail Anchors"]
+      },
+      {
+        title: "Drum Wheel",
+        image: "/lovable-uploads/2.jpeg",
+        details: ["Relays", "Track Circuits", "Axle Counters", "Controllers"]
+      },
+      {
+        title: "Rail Dolly",
+        image: "/lovable-uploads/3.png",
+        details: ["Thermit Welding", "Flash Butt Welding", "Tool Kits", "Grinders"]
+      },
+      {
+        title: "Insulated Rail Dolley wheel",
+        image: "/lovable-uploads/4.png",
+        details: ["Sleeper Inserters", "Torque Wrenches", "Spike Pullers", "Manual Tools"]
+      }
+    ].map((product, index) => (
+      <div key={index} className="flip-container">
+        <div className="flip-card">
+          <div className="flip-front">
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Enterprise Software", description: "Scalable software solutions for large organizations", category: "Software" },
-              { title: "Manufacturing Equipment", description: "High-precision machinery for industrial applications", category: "Hardware" },
-              { title: "Consulting Services", description: "Expert guidance for digital transformation", category: "Services" },
-              { title: "Quality Assurance", description: "Comprehensive testing and quality control", category: "Services" },
-              { title: "Technical Support", description: "24/7 support for all our products", category: "Support" },
-              { title: "Training Programs", description: "Professional development and certification", category: "Education" }
-            ].map((product, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
-                <CardContent className="p-6">
-                  <Badge className="mb-4 bg-emerald-100 text-emerald-800 hover:bg-emerald-200">
-                    {product.category}
-                  </Badge>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{product.title}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
-                  <Button variant="ghost" className="text-emerald-600 hover:text-emerald-700 p-0">
-                    Learn More <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flip-back">
+            <h3>{product.title}</h3>
+            <ul>
+              {product.details.map((detail, i) => (
+                <li key={i}>{detail}</li>
+              ))}
+            </ul>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       </section>
 
       {/* Vision Section */}
@@ -421,15 +510,16 @@ const Index = () => {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold mb-2">Address</h4>
-                    <p className="text-emerald-100">123 Business District, Enterprise City, EC 12345</p>
+                    <p className="text-emerald-100">Plot No. 6 & 10, Jagannathpuri Colony
+Swarg Ashram Road, Hapur (U.P.) 245101</p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Phone</h4>
-                    <p className="text-emerald-100">+1 (555) 123-4567</p>
+                    <p className="text-emerald-100">+91 6397930750</p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Email</h4>
-                    <p className="text-emerald-100">contact@sakshamenterprises.com</p>
+                    <p className="text-emerald-100">Sakshamenterpriseshpu@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -477,7 +567,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Saksham Enterprises</h3>
               <p className="text-gray-400">
-                Excellence in enterprise solutions since 2010. Building the future, one project at a time.
+                Excellence in enterprise solutions since 2020. Building the future, one project at a time.
               </p>
             </div>
             <div>
