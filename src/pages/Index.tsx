@@ -187,7 +187,7 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <div className="w-8 h-8 bg-emerald-600 rounded group-hover:bg-white transition-colors"></div>
@@ -198,7 +198,7 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <div className="w-8 h-8 bg-emerald-600 rounded group-hover:bg-white transition-colors"></div>
@@ -209,7 +209,7 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <div className="w-8 h-8 bg-emerald-600 rounded group-hover:bg-white transition-colors"></div>
@@ -425,7 +425,7 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <span className="text-2xl font-bold text-emerald-600 group-hover:text-white">ISO</span>
@@ -435,7 +435,7 @@ const Index = () => {
                 <Badge className="bg-emerald-100 text-emerald-800">Certified Since 2018</Badge>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <span className="text-2xl font-bold text-emerald-600 group-hover:text-white">EMS</span>
@@ -445,7 +445,7 @@ const Index = () => {
                 <Badge className="bg-emerald-100 text-emerald-800">Certified Since 2019</Badge>
               </CardContent>
             </Card>
-            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-emerald-100 hover:border-emerald-200 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 transition-colors">
                   <span className="text-2xl font-bold text-emerald-600 group-hover:text-white">SOC</span>
